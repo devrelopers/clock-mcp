@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.1] - 2026-04-20
+
+### Changed
+- Restructured README install section. Claude Desktop and Claude Code
+  are now equal siblings under a single "Use it" heading, with Claude
+  Desktop listed first as the higher-friction primary path.
+- Added Windows and Linux paths for `claude_desktop_config.json`.
+- Added a note about merging the `clock` entry with existing
+  `mcpServers` entries rather than replacing them.
+
 ## [0.1.0] - 2026-04-20
 
 ### Added
@@ -20,5 +30,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Structured `{ error, hint }` JSON error shape on bad input.
 - CI on GitHub Actions: fmt, clippy, test, release build, publish dry-run.
 
-[Unreleased]: https://github.com/devrelopers/clock-mcp/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/devrelopers/clock-mcp/compare/v0.1.1...HEAD
+[0.1.1]: https://github.com/devrelopers/clock-mcp/compare/v0.1.0...v0.1.1
 [0.1.0]: https://github.com/devrelopers/clock-mcp/releases/tag/v0.1.0
