@@ -22,17 +22,15 @@ cd clock-mcp
 cargo install --path .
 ```
 
-## Use it with Claude Code
+## Use it
 
-```sh
-claude mcp add clock clock-mcp
-```
+### With Claude Desktop
 
-Verify with `claude mcp list`.
+Add a `clock` entry to your `claude_desktop_config.json`:
 
-## Use it with Claude Desktop
-
-Add an entry to your `claude_desktop_config.json` (macOS: `~/Library/Application Support/Claude/claude_desktop_config.json`):
+- **macOS:** `~/Library/Application Support/Claude/claude_desktop_config.json`
+- **Windows:** `%APPDATA%\Claude\claude_desktop_config.json`
+- **Linux:** `~/.config/Claude/claude_desktop_config.json`
 
 ```json
 {
@@ -44,7 +42,17 @@ Add an entry to your `claude_desktop_config.json` (macOS: `~/Library/Application
 }
 ```
 
+If you already have other servers in `mcpServers`, merge the `clock` entry alongside them rather than replacing the block.
+
 Restart Claude Desktop. The five tools below will appear in the tools picker.
+
+### With Claude Code
+
+```sh
+claude mcp add clock clock-mcp
+```
+
+Verify with `claude mcp list`.
 
 ## Tool reference
 
