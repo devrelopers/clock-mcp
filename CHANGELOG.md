@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.2] - 2026-05-31
+
+### Fixed
+- Server now self-reports its identity as `clock-mcp` in the MCP
+  `initialize` response. Previously it inherited `rmcp`'s default
+  `ServerInfo`, which expands `CARGO_CRATE_NAME` inside the `rmcp`
+  crate, so the server showed up as "rmcp" in client listings (e.g.
+  Claude Desktop). The reported version tracks `Cargo.toml` via
+  `env!("CARGO_PKG_VERSION")`.
+
 ## [0.1.1] - 2026-04-20
 
 ### Changed
@@ -30,6 +40,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Structured `{ error, hint }` JSON error shape on bad input.
 - CI on GitHub Actions: fmt, clippy, test, release build, publish dry-run.
 
-[Unreleased]: https://github.com/devrelopers/clock-mcp/compare/v0.1.1...HEAD
+[Unreleased]: https://github.com/devrelopers/clock-mcp/compare/v0.1.2...HEAD
+[0.1.2]: https://github.com/devrelopers/clock-mcp/compare/v0.1.1...v0.1.2
 [0.1.1]: https://github.com/devrelopers/clock-mcp/compare/v0.1.0...v0.1.1
 [0.1.0]: https://github.com/devrelopers/clock-mcp/releases/tag/v0.1.0
